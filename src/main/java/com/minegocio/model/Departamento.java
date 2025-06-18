@@ -8,19 +8,19 @@ package com.minegocio.model;
  *
  * @author POS
  */
-public class Marca {
-    private int codMarca;
+public class Departamento {
+    private int codDepartamento;
     private String descripcion;
 
-    public Marca() {
+    public Departamento() {
     }
 
-    public int getCodMarca() {
-        return codMarca;
+    public int getCodDepartamento() {
+        return codDepartamento;
     }
 
-    public void setCodMarca(int codMarca) {
-        this.codMarca = codMarca;
+    public void setCodDepartamento(int codDepartamento) {
+        this.codDepartamento = codDepartamento;
     }
 
     public String getDescripcion() {

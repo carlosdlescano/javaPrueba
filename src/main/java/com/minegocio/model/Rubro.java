@@ -8,28 +8,28 @@ package com.minegocio.model;
  *
  * @author POS
  */
-public class Familia {
-    private int codFamilia;
-    private Rubro codRubro;
-    private String descripcion;
+public class Rubro {
+    private int codRubro;
+    private Departamento codDepartamento;
+    String descripcion;
 
-    public Familia() {
+    public Rubro() {
     }
 
-    public int getCodFamilia() {
-        return codFamilia;
-    }
-
-    public void setCodFamilia(int codFamilia) {
-        this.codFamilia = codFamilia;
-    }
-
-    public Rubro getCodRubro() {
+    public int getCodRubro() {
         return codRubro;
     }
 
-    public void setCodRubro(Rubro codRubro) {
+    public void setCodRubro(int codRubro) {
         this.codRubro = codRubro;
+    }
+
+    public Departamento getCodDepartamento() {
+        return codDepartamento;
+    }
+
+    public void setCodDepartamento(Departamento codDepartamento) {
+        this.codDepartamento = codDepartamento;
     }
 
     public String getDescripcion() {
@@ -39,7 +39,7 @@ public class Familia {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-    
+
     
     
 }
