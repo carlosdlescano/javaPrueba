@@ -10,21 +10,45 @@ import java.math.BigDecimal;
  *
  * @author POS
  */
+/*
+ Articulo      |
++----------------+
+| int codigo    |
+| Marca marca   |
+| Departamento departamento |
+| Rubro rubro  |
+| Familia familia |
+| String descripcion |
+| int stock   |
+| double precioCosto |
+| double margen |
+| double precioVenta |
+| Estado estado |
+| int codigoDeBarra |
++----------------+
+
+*/
 public class Articulo {
     private int codigo;
     private int marca;
-    private String descipcion;
+    private int codDepartamento;
+    private int codRubro;
+    private int codFamilia;
+    private String descripcion;
     private int stock;
-    private BigDecimal precioCosto;
-    private BigDecimal margen;
-    private BigDecimal precioVenta;
+    private double precioCosto;
+    private double margen;
+    private double precioVenta;
     private int estado;
     private int codigoBarra;
 
-    public Articulo(int codigo, int marca, String descipcion, int stock, BigDecimal precioCosto, BigDecimal margen, BigDecimal precioVenta, int estado, int codigoBarra) {
+    public Articulo(int codigo, int marca, int departamento, int rubro, int familia, String descipcion, int stock, double precioCosto, double margen, double precioVenta, int estado, int codigoBarra) {
         this.codigo = codigo;
         this.marca = marca;
-        this.descipcion = descipcion;
+        this.codDepartamento = departamento;
+        this.codRubro = rubro;
+        this.codFamilia = familia;
+        this.descripcion = descipcion;
         this.stock = stock;
         this.precioCosto = precioCosto;
         this.margen = margen;
@@ -32,7 +56,7 @@ public class Articulo {
         this.estado = estado;
         this.codigoBarra = codigoBarra;
     }
-
+    
     public Articulo() {
     }
 
@@ -52,12 +76,37 @@ public class Articulo {
         this.marca = marca;
     }
 
-    public String getDescipcion() {
-        return descipcion;
+    public int getCodDepartamento() {
+        return codDepartamento;
     }
 
-    public void setDescipcion(String descipcion) {
-        this.descipcion = descipcion;
+    public void setCodDepartamento(int codDepartamento) {
+        this.codDepartamento = codDepartamento;
+    }
+
+    public int getCodRubro() {
+        return codRubro;
+    }
+
+    public void setCodRubro(int codRubro) {
+        this.codRubro = codRubro;
+    }
+
+    public int getCodFamilia() {
+        return codFamilia;
+    }
+
+    public void setCodFamilia(int codFamilia) {
+        this.codFamilia = codFamilia;
+    }
+    
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public int getStock() {
@@ -68,27 +117,27 @@ public class Articulo {
         this.stock = stock;
     }
 
-    public BigDecimal getPrecioCosto() {
+    public double getPrecioCosto() {
         return precioCosto;
     }
 
-    public void setPrecioCosto(BigDecimal precioCosto) {
+    public void setPrecioCosto(double precioCosto) {
         this.precioCosto = precioCosto;
     }
 
-    public BigDecimal getMargen() {
+    public double getMargen() {
         return margen;
     }
 
-    public void setMargen(BigDecimal margen) {
+    public void setMargen(double margen) {
         this.margen = margen;
     }
 
-    public BigDecimal getPrecioVenta() {
+    public double getPrecioVenta() {
         return precioVenta;
     }
 
-    public void setPrecioVenta(BigDecimal precioVenta) {
+    public void setPrecioVenta(double precioVenta) {
         this.precioVenta = precioVenta;
     }
 
@@ -107,6 +156,8 @@ public class Articulo {
     public void setCodigoBarra(int codigoBarra) {
         this.codigoBarra = codigoBarra;
     }
+
+   
     
     
     
