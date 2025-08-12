@@ -5,6 +5,7 @@
 package com.minegocio.DAO;
 
 import com.minegocio.model.Articulo;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ public interface ArticuloDAO {
     public boolean crearArticulo(Articulo art);
     public boolean actualizarArticulo (Articulo art);
     public boolean eliminarArticulo(int codigo, int marca);
-    public Articulo buscar(int codigo, int marca);
+    public ArrayList<Articulo> buscar(int codigo, int marca,String descripcion, String partDescripcion, int departamento, int rubro, int familia);
     public List<Articulo> listarTodos();
         
     
