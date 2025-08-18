@@ -12,7 +12,8 @@ import java.math.BigDecimal;
  */
 /*
  Articulo      |
-+----------------+
++----------------+    
+| int IDcodigo    |
 | int codigo    |
 | Marca marca   |
 | Departamento departamento |
@@ -24,7 +25,7 @@ import java.math.BigDecimal;
 | double margen |
 | double precioVenta |
 | Estado estado |
-| int codigoDeBarra |
+| Long codigoDeBarra |
 +----------------+
 
 */
@@ -40,9 +41,9 @@ public class Articulo {
     private double margen;
     private double precioVenta;
     private int estado;
-    private int codigoBarra;
+    private Long codigoBarra;
 
-    public Articulo(int codigo, int marca, int departamento, int rubro, int familia, String descipcion, int stock, double precioCosto, double margen, double precioVenta, int estado, int codigoBarra) {
+    public Articulo(int codigo, int marca, int departamento, int rubro, int familia, String descipcion, int stock, double precioCosto, double margen, double precioVenta, int estado, Long codigoBarra) {
         this.codigo = codigo;
         this.marca = marca;
         this.codDepartamento = departamento;
@@ -149,11 +150,11 @@ public class Articulo {
         this.estado = estado;
     }
 
-    public int getCodigoBarra() {
+    public Long getCodigoBarra() {
         return codigoBarra;
     }
 
-    public void setCodigoBarra(int codigoBarra) {
+    public void setCodigoBarra(Long codigoBarra) {
         this.codigoBarra = codigoBarra;
     }
 

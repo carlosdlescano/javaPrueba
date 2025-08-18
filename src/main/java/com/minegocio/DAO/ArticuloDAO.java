@@ -16,7 +16,7 @@ public interface ArticuloDAO {
     public boolean crearArticulo(Articulo art);
     public boolean actualizarArticulo (Articulo art);
     public boolean eliminarArticulo(int codigo, int marca);
-    public ArrayList<Articulo> buscar(int codigo, int marca,String descripcion, String partDescripcion, int departamento, int rubro, int familia);
+    public ArrayList<Articulo> buscar(int codigo, int marca, String descripcion, int departamento, int rubro, int familia, long codigoBarra);
     public List<Articulo> listarTodos();
         
     
