@@ -8,10 +8,14 @@ import com.minegocio.model.Articulo;
 import com.minegocio.util.Conexion;
 import com.minegocio.DAO.ArticuloDAO;
 import com.minegocio.DaoImpl.ArticuloDAOImpl;
+import com.minegocio.DaoImpl.VentaDAOImpl;
+import com.minegocio.model.DetalleVenta;
 import java.sql.Connection;
 import java.util.Scanner;
 import java.lang.*;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -21,14 +25,34 @@ import java.util.ArrayList;
 public class MiNegocio {
 
     public static void main(String[] args) {
-        //PRUEBA DE CONEXION
+        
+        //PRUEBA DE VENTA
+        VentaDAOImpl ventaDAO = new VentaDAOImpl();
+
+        // Datos de prueba
+        String cliente = "Juan Pérez";
+        Timestamp fechaVenta = new Timestamp(System.currentTimeMillis());
+
+        List<DetalleVenta> detalles = new ArrayList<>();
+        detalles.add(new DetalleVenta(1, 3)); // idCodArticulo = 101, cantidad = 2
+        detalles.add(new DetalleVenta(4, 50)); // idCodArticulo = 205, cantidad = 1
+
+        boolean resultado = ventaDAO.grabarVenta(cliente, fechaVenta, detalles);
+
+        if (resultado) {
+            System.out.println("✅ Venta registrada exitosamente.");
+        } else {
+            System.out.println("❌ Error al registrar la venta.");
+        }
+
+    /*    //PRUEBA DE CONEXION
     Connection con = Conexion.getConexion();
     
     if (con != null) {
         System.out.println("Conexión exitosa!");
     } else {
         System.out.println("****Fallo la conexion.****");
-    }
+    }*/
 /*
        // Crear el objeto Articulo en base de datos mediante Procedimiento almacenado
        
@@ -92,7 +116,8 @@ public class MiNegocio {
         }
 
         */
-    
+    //**************Actualizar articulo
+    /*
     // Crear el artículo con los datos actualizados
         Articulo art = new Articulo();
         art.setCodigo(203); // Código del artículo que ya existe
@@ -100,11 +125,11 @@ public class MiNegocio {
         art.setCodDepartamento(2);
         art.setCodRubro(2);
         art.setCodFamilia(1);
-        art.setDescripcion("Mouse inalámbrico actualizado");
+        art.setDescripcion("Mouse inalámbrico");
         art.setStock(150);
-        art.setPrecioCosto(3000);
+        art.setPrecioCosto(3050);
         art.setMargen(25);
-        art.setPrecioVenta(3800);
+        art.setPrecioVenta(3815);
         art.setCodigoBarra(779801600436L);
 
         // Crear instancia del DAO
@@ -121,7 +146,7 @@ public class MiNegocio {
             System.out.println("❌ No se pudo actualizar el artículo.");
         }
 
-    }
+    */}
 
 
     

@@ -17,6 +17,16 @@
             <artifactId>mssql-jdbc</artifactId>
             <version>12.2.0.jre11</version> <!-- Cambiá el número según tu JDK -->
         </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>13</version>
+        </dependency>
     </dependencies>
-
+   
 </project>

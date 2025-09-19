@@ -30,6 +30,7 @@ import java.math.BigDecimal;
 
 */
 public class Articulo {
+    private int idCodArticulo;
     private int codigo;
     private int marca;
     private int codDepartamento;
@@ -61,6 +62,14 @@ public class Articulo {
     public Articulo() {
     }
 
+    public int getIdCodArticulo() {
+        return idCodArticulo;
+    }
+
+    public void setIdCodArticulo(int idCodArticulo) {
+        this.idCodArticulo = idCodArticulo;
+    }
+    
     public int getCodigo() {
         return codigo;
     }
